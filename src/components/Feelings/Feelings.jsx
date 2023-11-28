@@ -5,9 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 
 function Feelings( {setFeelings} ) {
-  // You will need to keep this state in this component
-  // if you're only using something in one component,
-  // you do not need to move it to redux
+
   const history = useHistory();
   const dispatch = useDispatch();
 
@@ -20,15 +18,6 @@ function Feelings( {setFeelings} ) {
     });
   }
 
-//   const addFeeling = (event) => {
-//     event.preventDefault();
-//     axios.post('/api/feedback', feelingToAdd).then((response) => {
-//       setFeelings();
-//       setFeelingToAdd({feeling: 0 });
-//     }).catch((error) => {
-//       console.log('Error in posting a feeling', error);
-//       alert('Something went wrong!')
-//     });
 
 const addFeeling = (event) => {
     console.log(`Adding feedback info:`, feelingToAdd)

@@ -4,9 +4,7 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 
 function Understanding( {setUnderstanding} ) {
-  // You will need to keep this state in this component
-  // if you're only using something in one component,
-  // you do not need to move it to redux
+
   const history = useHistory();
   let [understandingToAdd, setUnderstandingToAdd] = useState({ understanding: 0 });
 
@@ -26,12 +24,6 @@ function Understanding( {setUnderstanding} ) {
       console.log('Error in posting a understanding', error);
       alert('Something went wrong!')
     });
-  
-    // TODO: Axios HTTP Request here, instead of using addNewProduct from parent
-    // use productToAdd as the data
-    // addNewProduct(productToAdd);
-
-    // TODO: Clear input fields
 
   };
 
